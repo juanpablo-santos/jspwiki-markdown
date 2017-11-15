@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
+  <groupId>org.apache.jspwiki</groupId>
+  <artifactId>jspwiki-markdown-builder</artifactId>
+  <modelVersion>4.0.0</modelVersion>
+  <name>Apache JSPWiki markdown parser demo</name>
+  <description>Apache JSPWiki markdown parser demo</description>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <modules>
+    <module>jspwiki-markdown</module>
+    <module>jspwiki-markdown-war</module>
+  </modules>
+  
+  <properties>
+    <plugin.compiler>3.6.1</plugin.compiler>
+    <plugin.enforcer>1.4</plugin.enforcer>
+    <plugin.tomcat>2.2</plugin.tomcat>
+    <plugin.war>3.1.0</plugin.war>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <version.jdk>1.7</version.jdk>
+    <version.jspwiki>2.10.3-SNAPSHOT</version.jspwiki>
+  </properties>
+  
+  <build>
+    <plugins>    
+      <plugin>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforcer-validations</id>
+            <goals><goal>enforce</goal></goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${plugin.compiler}</version>
+          <configuration>
+            <encoding>${project.build.sourceEncoding}</encoding>
+            <source>${version.jdk}</source>
+            <target>${version.jdk}</target>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${plugin.enforcer}</version>
+          <configuration>
+            <fail>true</fail>
+            <rules>
+              <requireJavaVersion>
+                <message>MUST USE JDK ${version.jdk}</message>
+                <version>${version.jdk}</version>
+              </requireJavaVersion>
+            </rules>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>${plugin.war}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>${plugin.tomcat}</version>
+          <configuration>
+            <contextReloadable>true</contextReloadable>
+            <port>8080</port>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

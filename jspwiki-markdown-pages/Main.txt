@@ -1,0 +1,16 @@
+[{TableOfContents}]()
+
+Awesome header!
+=================
+
+With awesome subheaders
+-----------------------
+
+## yes, awesome subheaders!
+
+### (and onward), too!
+
+Look, ma! plugins! CurrentTimePlugin: [{CurrentTimePlugin}]()
+
+**Bold** and *em* text and so many moar
+
