@@ -44,6 +44,14 @@
     <version.jdk>1.7</version.jdk>
     <version.jspwiki>2.10.3-SNAPSHOT</version.jspwiki>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>apache.snapshots</id>
+      <name>Apache Snapshot Repository</name>
+      <url>https://repository.apache.org/snapshots</url>
+    </repository>
+  </repositories>
   
   <build>
     <plugins>    
