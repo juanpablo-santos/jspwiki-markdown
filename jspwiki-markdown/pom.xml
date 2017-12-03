@@ -33,7 +33,7 @@
   <description>Apache JSPWiki markdown parser example</description>
 
   <properties>
-    <version.flexmark>0.28.6</version.flexmark>
+    <version.flexmark>0.28.14</version.flexmark>
     <version.junit>4.12</version.junit>
     <version.servlet-api>2.5</version.servlet-api>
     <version.stripes>1.6.0</version.stripes>
@@ -46,6 +46,14 @@
       <version>${version.jspwiki}</version>
       <classifier>classes</classifier>
       <scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.jspwiki</groupId>
+      <artifactId>jspwiki-war</artifactId>
+      <type>test-jar</type>
+      <version>${version.jspwiki}</version>
+      <scope>test</scope>
     </dependency>
 
     <dependency>
