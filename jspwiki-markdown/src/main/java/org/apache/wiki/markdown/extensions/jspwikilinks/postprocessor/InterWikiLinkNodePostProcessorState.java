@@ -52,7 +52,7 @@ public class InterWikiLinkNodePostProcessorState implements NodePostProcessorSta
         this.linkOperations = new LinkParsingOperations( wikiContext );
         this.document = document;
         this.hasRef = hasRef;
-        this.m_useOutlinkImage = linkOperations.getLocalBooleanProperty( MarkupParser.PROP_USEOUTLINKIMAGE, m_useOutlinkImage );
+        this.m_useOutlinkImage = wikiContext.getBooleanWikiProperty( MarkupParser.PROP_USEOUTLINKIMAGE, m_useOutlinkImage );
         final Boolean wysiwygVariable = ( Boolean )wikiContext.getVariable( RenderingManager.WYSIWYG_EDITOR_MODE );
         m_wysiwygEditorMode = wysiwygVariable != null ? wysiwygVariable.booleanValue() : false;
     }

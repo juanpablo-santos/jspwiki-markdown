@@ -40,7 +40,7 @@ public class ExternalLinkNodePostProcessorState implements NodePostProcessorStat
         this.hasRef = hasRef;
         this.wikiContext = wikiContext;
         this.linkOperations = new LinkParsingOperations( wikiContext );
-        this.m_useOutlinkImage = linkOperations.getLocalBooleanProperty( MarkupParser.PROP_USEOUTLINKIMAGE, m_useOutlinkImage );
+        this.m_useOutlinkImage = wikiContext.getBooleanWikiProperty( MarkupParser.PROP_USEOUTLINKIMAGE, m_useOutlinkImage );
     }
 
     /**

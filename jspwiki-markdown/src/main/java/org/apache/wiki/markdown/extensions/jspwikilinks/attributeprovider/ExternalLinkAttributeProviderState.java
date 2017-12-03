@@ -41,7 +41,7 @@ public class ExternalLinkAttributeProviderState implements NodeAttributeProvider
         this.hasRef = hasRef;
         this.wikiContext = wikiContext;
         this.linkOperations = new LinkParsingOperations( wikiContext );
-        this.m_useRelNofollow = linkOperations.getLocalBooleanProperty( MarkupParser.PROP_USERELNOFOLLOW, false );
+        this.m_useRelNofollow = wikiContext.getBooleanWikiProperty( MarkupParser.PROP_USERELNOFOLLOW, false );
     }
 
     /**

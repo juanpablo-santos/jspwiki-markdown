@@ -48,7 +48,7 @@ public class JSPWikiLinkNodePostProcessor extends NodePostProcessor {
         this.m_context = m_context;
         this.document = document;
         linkOperations = new LinkParsingOperations( m_context );
-        m_useOutlinkImage = linkOperations.getLocalBooleanProperty( MarkupParser.PROP_USEOUTLINKIMAGE, m_useOutlinkImage );
+        m_useOutlinkImage = m_context.getBooleanWikiProperty( MarkupParser.PROP_USEOUTLINKIMAGE, m_useOutlinkImage );
     }
 
     /**
