@@ -149,8 +149,8 @@ public class MarkdownRendererTest {
 
     @Test
     public void testMarkupExtensionNonExistentPlugin() throws Exception {
-        String src = "[{SamplePlugin2 text=test}]()";
-        Assert.assertEquals( "<p><span class=\"error\">JSPWiki : testpage - Plugin insertion failed: Could not find plugin SamplePlugin2</span></p>\n", translate( src ) );
+        String src = "[{PampleSlugin text=test}]()";
+        Assert.assertEquals( "<p><span class=\"error\">JSPWiki : testpage - Plugin insertion failed: Could not find plugin PampleSlugin</span></p>\n", translate( src ) );
     }
 
     @Test
