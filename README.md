@@ -17,7 +17,7 @@ Currently it supports:
 Prerequisites
 -------------
 * at least Java 7
-* latest snapshot (> 2.10.3-git-42)
+* latest snapshot (> 2.10.3-git-43)
 
 Installation
 ------------
