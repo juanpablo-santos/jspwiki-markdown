@@ -30,7 +30,6 @@
   <packaging>pom</packaging>
   
   <modules>
-    <module>jspwiki-markdown</module>
     <module>jspwiki-markdown-war</module>
   </modules>
   

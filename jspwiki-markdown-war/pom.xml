@@ -44,7 +44,7 @@
     <dependency>
       <groupId>org.apache.jspwiki</groupId>
       <artifactId>jspwiki-markdown</artifactId>
-      <version>${project.version}</version>
+      <version>${version.jspwiki}</version>
     </dependency>
   </dependencies>
                    
