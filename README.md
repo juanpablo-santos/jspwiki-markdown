@@ -6,8 +6,8 @@ Example of Markdown Parser/Renderer integration in JSPWiki.
 
 Prerequisites
 -------------
-* at least Java 7
-* latest snapshot (> 2.10.3-git-44)
+* at least Java 8
+* latest snapshot (> 2.11.1-git-02)
 
 Demoing
 -------
